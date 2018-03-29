@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.offcn.mapper.Vegetables_Mapper">
+	
+    <select id="save" parameterType="com.offcn.pojo.Vegetables">
+       insert into vegetables 
+       (
+       shucai,
+       minprice,
+       middle_rate,
+       max_rate,
+       guige,
+       danwei,
+       date)
+       values
+       (
+       #{shucai},
+       #{minprice},
+       #{middle_rate},
+       #{max_rate},
+       #{guige},
+       #{danwei},
+       #{date})
+    </select>
+
+	<!-- <insert id="javaPoi" parameterType="java.util.List">
+		insert into vegetables
+		(
+		shucai,
+		minprice,
+		middle_rate,
+		max_rate,
+		guige,
+		danwei,
+		date)
+		values
+		<foreach collection="list" item="li" index="index" separator=",">
+		(
+		#{li.shucai},
+		#{li.minprice},
+		#{li.middle_rate},
+		#{li.max_rate},
+		#{li.guige},
+		#{li.danwei},
+		#{li.date}
+		)
+		</foreach>
+	</insert> -->
+</mapper>
